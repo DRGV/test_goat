@@ -1,6 +1,7 @@
 <html>
     <title>To-Do lists</title>
 </html>
+
 <body>
   <h1>Your To-Do lists</h1>
   <form method="POST">
@@ -8,7 +9,10 @@
       {% csrf_token %}
   </form>
   <table id="id_list_table">
-    <tr><td>1: {{ new_item_text }}</td></tr>
+      {% for item in items %}
+          <tr><td>{{ forloop.counter }}: {{ item.text }}</td></tr>
+      {% endfor %}
   </table>
 </body>
+
 </html>
