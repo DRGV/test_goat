@@ -1,4 +1,5 @@
 db.sqlite3
 __pycache__
 *.pyc
-migrations/*_item_list.py
+migrations/????_item_list.py
+
