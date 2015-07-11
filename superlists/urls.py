@@ -5,7 +5,7 @@ from lists import urls as list_urls
 
 urlpatterns = [
     url(r'^$', list_views.home_page, name='home'),
-    url(r'^lists/new$', views.new_list, name='new_list'),
+    url(r'^lists/new$', list_views.new_list, name='new_list'),
     url(r'^lists/', include(list_urls)),
     # url(r'^admin/', include(admin.site.urls)),
 ]
